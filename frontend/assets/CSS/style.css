@@ -6,7 +6,12 @@
 
 :root{
     --color-ink: #111111;
+    --color-ink-muted: #36454F;
+    --color-ink-2: #708090;
+    --color-ink-3: #a9a9a9;
     --color-ember: #FF5A1F;
+    --color-ember-muted: #d67a74;
+    --color-ember-deep-muted:#9D441a;
     --color-bone: #F5F1E8;
 
     --space-sm: 0.5rem;
@@ -25,8 +30,14 @@ body{
     color: var(--color-ink);
     background: var(--color-bone);
 }
+main{
+    padding-inline: 40px;
+}
 
 header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: var(--space-md) var(--space-ig);
     background: var(--color-ink);
     color: var(--color-bone);
@@ -35,6 +46,36 @@ header{
 header .logo{
     font-size: var(--font-size-base);
     font-weight: 700;
+}
+header .search-bar{
+    display: flex;
+    align-items: center;
+}
+header .search-bar input {
+    background-color: var(--color-ink-muted);
+    padding: var(--space-sm);
+    border-radius: 5px 0 0 5px;
+    border-style: none;
+    width: 300px;
+}
+header .search-bar span{
+    background-color: var(--color-ember);
+    padding: 3px;
+    border-radius: 0 4px 4px 0;
+}
+header .nav-links{
+    display: flex;
+    gap: 35px;
+}
+header .nav-links a {
+    color: var(--color-bone);
+    text-decoration: none;
+    font-size: var(--font-size-base);
+    transition: ease 0.5s;
+}
+header .nav-links a:hover {
+    transform: translateY(5px);
+    cursor: pointer;
 }
 header .mobile-menu-btn{
     gap: var(--space-sm);
@@ -45,14 +86,36 @@ header .mobile-menu-btn span{
     width: var(--space-lg);
     margin-bottom: var(--space-sm);
 }
+.hero{
+    padding: var(--font-size-xl);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product-grid{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 250px;
+    gap: 30px;
+}
+.product-grid .product-card{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 2px solid red;
+    border-radius: 5px;
+}
 footer{
     padding: var(--space-ig);
     color: var(--color-ink);
     text-align: center;
     font-size: var(--font-size-sm);
 }
-@mwdia(max-width: 400px){
+@media(max-width: 400px){
     header .mobile-menu-btn span{
         display: block;
+    }
+    header .nav-links{
+        display: none;
     }
 }
