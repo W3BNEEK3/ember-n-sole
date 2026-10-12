@@ -16,7 +16,7 @@
 
     --space-sm: 0.5rem;
     --space-md: 1rem;
-    --space-ig: 2rem;
+    --space-lg: 2rem;
     --space-x1: 3rem;
 
     --font-size-sm:sm 0.875rem;
@@ -38,7 +38,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--space-md) var(--space-ig);
+    padding: var(--space-md) var(--space-lg);
     background: var(--color-ink);
     color: var(--color-bone);
 }
@@ -47,21 +47,32 @@ header .logo{
     font-size: var(--font-size-base);
     font-weight: 700;
 }
-header .search-bar{
+header .search-bar {
+    position: relative;
     display: flex;
     align-items: center;
 }
 header .search-bar input {
     background-color: var(--color-ink-muted);
     padding: var(--space-sm);
-    border-radius: 5px 0 0 5px;
+    border-radius: 5px;
     border-style: none;
     width: 300px;
 }
-header .search-bar span{
+header .search-bar button{
+    position: absolute;
+    right: 0;
+    background-color: var(--color-ink-muted);
+    color: var(--color-bone);
+    border-radius: 50%;
+    border-style: none;
+    cursor: pointer;
+    transition: background-color ease 0.9s, border-radius ease 0.9s, padding ease 0.9s;
+}
+header .search-bar button:hover {
     background-color: var(--color-ember);
-    padding: 3px;
     border-radius: 0 4px 4px 0;
+    padding: 4px;
 }
 header .nav-links{
     display: flex;
@@ -78,20 +89,34 @@ header .nav-links a:hover {
     cursor: pointer;
 }
 header .mobile-menu-btn{
+    display: none;
     gap: var(--space-sm);
 }
 header .mobile-menu-btn span{
-    display: none;
     border: 2px solid var(--color-bone);
     width: var(--space-lg);
     margin-bottom: var(--space-sm);
 }
+/* 
+HERO SECTION STYLING
+*/
 .hero{
     padding: var(--font-size-xl);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.hero .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero .hero-content h1 {
+    font-family: "BBH Bartle", sans-serif;
+}
+/* 
+PRODUCT SECTION STYLING
+*/
 .product-grid{
     display: flex;
     flex-wrap: wrap;
@@ -101,12 +126,28 @@ header .mobile-menu-btn span{
 .product-grid .product-card{
     display: flex;
     flex-direction: column;
-    background-color: white;
-    border: 2px solid red;
-    border-radius: 5px;
+    background-color: var(--color-ink);
+    color: white;
+    border-radius: 20px;
+    padding: 6px;
+}
+.product-grid .product-card img{
+    object-fit: cover;
+    border-radius: 15px;
+}
+.product-grid .product-card .product-action-btns {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-sm);
+}
+.product-grid .product-card .product-action-btns .product-view-btn {
+    padding-inline: var(--space-lg);
+    padding-block: var(--space-sm);
+    border-radius: 10px;
+    border-style: none;
 }
 footer{
-    padding: var(--space-ig);
+    padding: var(--space-lg);
     color: var(--color-ink);
     text-align: center;
     font-size: var(--font-size-sm);

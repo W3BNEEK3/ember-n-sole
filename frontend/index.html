@@ -5,66 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/CSS/style.css">
+    <!-- GOOGLE ICONS LINK -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- GOOGLE FONT LINKS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
-    <h2 class="Logo"> Ember <span style="color:red">&</span> Sole</h2>
+    <h2 class="Logo">ES</h2>
     <div class="search-bar">
         <input type="text" placeholder="search products">
-        <span class="material-symbols-outlined">search</span>
+        <button type="button" class="material-symbols-outlined">search</button>
     </div>
-    <nav>about</nav>
-    <nav>home</nav>
-    <nav>shop</nav>
+    <nav class="nav-links">
+        <a class="material-symbols-outlined" href="product.html">home</a>
+        <a class="material-symbols-outlined" href="#">store</a>
+        <a class="material-symbols-outlined" href="#">info</a>
+    </nav>
     <div class="mobile-menu-btn">
         <span></span>
         <span></span>
         <span></span>
-</div>
+    </div>
 </header>
 <main>
-     <sectoin class="hero">
-        <h1>Welcome to My Website</h1>
-        <p> this is a simple hero section.</p>
-        </sectoin>
+     <section class="hero">
+        <div class="hero-content">
+            <h1>Find your sole</h1>
+            <p>Your shoes are more than just footwear, they're the foundation of your journey and an expression of your unique identity.</p>
+        </div>
+    </section>
 
         <section class="fearture-items">
             <h2>Feature Product-grid</h2>
             <div class="product-grid">
                 <article class="product-card">
-                <img src="assets/images/1 par de zapatillas deportivas con cordones de malla y bloques de color para hombres, zapatos deportivos de moda casual diaria con amortiguación de impactos (corren un tamaño talla grande pequeño)….jfif" alt="Nike Air Max 270" width="250px" height="250px">
-                <h3> Nike Air Max 270</h3>
-                <p class="price">₦85,000</p>
-                <button type="button">View</button>
-                <button type="button">Add to Cart</button>
+                    <img src="assets/images/1 par de zapatillas deportivas con cordones de malla y bloques de color para hombres, zapatos deportivos de moda casual diaria con amortiguación de impactos (corren un tamaño talla grande pequeño)….jfif" alt="Nike Air Max 270" width="250px" height="250px">
+                    <h3> Nike Air Max 270</h3>
+                    <p class="price">₦85,000</p>
+                    <div class="product-action-btns">
+                        <button class="product-view-btn" type="button">View</button>
+                        <button class="product-add-btn" type="button">Add to Cart</button>
+                    </div>
             </article>
             <article class="product-card">
                 <img src="assets/images/11329436558065120.jfif" alt="Leather Shoe 270" width="250px" height="250px">
                 <h3> Leather Shoe 270</h3>
                 <p Class="price">₦45,000</p>
-                <button type="button">View</button>
-                <button type="button">Add to Cart</button>
+                <div class="product-action-btns">
+                        <button class="product-view-btn" type="button">View</button>
+                        <button class="product-add-btn" type="button">Add to Cart</button>                    
+                </div>
+                
             </article>
             <article class="product-card">
                 <img src="assets/images/3166662233441836.jfif" alt="Chelsea Boot 270" width="250px" height="250px">
                 <h3> Chelsea Boot 270</h3>
                 <p class="price">₦30,000</p>
-                <button type="button">View</button>
-                <button type="button">Add to Cart</button>
+                 <div class="product-action-btns">
+                        <button class="product-view-btn" type="button">View</button>
+                        <button class="product-add-btn" type="button">Add to Cart</button>                    
+                </div>
             </article>
             <article class="product-card">
                 <img src="assets/images/Luxury High-Top PU Slip-On Men's Chelsea Boots, British Style Men's Cowboy Boots, Business Formal Work Shoes, Wedding Shoes, Elegant Red Sole Comfortable Slip-On Boots, Autumn Boots, Spring Shoes….jfif"alt="sneakers 270" width="250px" height="250px">
                 <h3> Sneakers 270</h3>
                 <p class="=price">₦25,000</p>
-                 <button type="button">View</button>
-                <button type="button">Add to Cart</button>
+                <div class="product-action-btns">
+                    <button class="product-view-btn" type="button">View</button>
+                    <button class="product-add-btn" type="button">Add to Cart</button>                    
+                </div>
             </article>
-        </div>
+            </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 My Website. All rights reserved. </p>
-          </footer>
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
         </body>
         </html>
