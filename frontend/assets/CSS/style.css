@@ -2,6 +2,7 @@
     box-sizing: content-box;
     margin: 0;
     padding: 0;
+    border: red solid 2px;
 }
 
 :root{
@@ -41,6 +42,7 @@ header{
     padding: var(--space-md) var(--space-lg);
     background: var(--color-ink);
     color: var(--color-bone);
+    max-width: 95%;
 }
 
 header .logo{
@@ -52,6 +54,7 @@ header .search-bar {
     display: flex;
     align-items: center;
 }
+
 header .search-bar input {
     background-color: var(--color-ink-muted);
     padding: var(--space-sm);
@@ -152,11 +155,14 @@ footer{
     text-align: center;
     font-size: var(--font-size-sm);
 }
-@media(max-width: 400px){
-    header .mobile-menu-btn span{
+@media(max-width: 500px){
+    header .mobile-menu-btn{
         display: block;
     }
     header .nav-links{
         display: none;
+    }
+    header .search-bar input{
+        width: 150px;
     }
 }
