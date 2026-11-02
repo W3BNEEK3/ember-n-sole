@@ -87,7 +87,7 @@
 
 
 
-let itemList = [40, 100, 1, 5, 25, 10, -3];
+let itemList = [1, 5, 25, 10, -3, 40, 100];
 
 function sortNum(items){
     const result = [];
@@ -98,7 +98,6 @@ function sortNum(items){
 
     for (let i = 0; i < n - 1; i++){
         let swapped = false;
-
         for (let j = 0; j < n - 1 - i; j++) {
             if (result[j] > result[j + 1]) {
                 const temp = result[j];

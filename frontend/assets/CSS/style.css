@@ -2,7 +2,6 @@
     box-sizing: content-box;
     margin: 0;
     padding: 0;
-    border: red solid 2px;
 }
 
 :root{
@@ -34,8 +33,7 @@ body{
 main{
     padding-inline: 40px;
 }
-
-header{
+.main-header{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -99,6 +97,20 @@ header .mobile-menu-btn span{
     border: 2px solid var(--color-bone);
     width: var(--space-lg);
     margin-bottom: var(--space-sm);
+}
+.mobile-sidebar{                      /*  */
+    background-color: var(--color-ink);
+    border-top: var(--color-bone) solid 1px;
+    padding: var(--space-sm);
+    /* transform: translateY(-500%); */
+}
+.sidebar-container{
+    display: flex;
+    justify-content: space-between;
+}
+.sidebar-container a{
+    text-decoration: none;
+    color: var(--color-bone);
 }
 /* 
 HERO SECTION STYLING
