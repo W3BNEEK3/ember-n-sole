@@ -13,8 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-    <div class="main-header">
+<header class="site-header">
+    <div class="shell main-header">
         <h2 class="Logo">ES</h2>
         <div class="search-bar" >
             <input type="text" placeholder="search products">
@@ -31,13 +31,15 @@
             <span></span>
         </div>
     </div>
-    <div class="mobile-sidebar" id="mobileSidebar">
-        <div class="sidebar-container">
+    <nav class="mobile-sidebar mobile-sidebar--open" id="mobileSidebar">
+        <div class="shell">
                 <a href="product.html">home</a>
                 <a href="#">store</a>
                 <a href="#">info</a>
+                <a href="#">Sign in</a>
+                <a href="#">Bag</a>
         </div>
-    </div>
+    </nav>
 </header>
 
 <main>
@@ -48,53 +50,20 @@
         </div>
     </section>
 
-        <section class="fearture-items">
-            <h2>Feature Product-grid</h2>
-            <div class="product-grid">
-                <article class="product-card">
-                    <img src="assets/images/1 par de zapatillas deportivas con cordones de malla y bloques de color para hombres, zapatos deportivos de moda casual diaria con amortiguación de impactos (corren un tamaño talla grande pequeño)….jfif" alt="Nike Air Max 270" width="250px" height="250px">
-                    <h3> Nike Air Max 270</h3>
-                    <p class="price">₦85,000</p>
-                    <div class="product-action-btns">
-                        <button class="product-view-btn" type="button">View</button>
-                        <button class="product-add-btn" type="button">Add to Cart</button>
-                    </div>
-            </article>
-            <article class="product-card">
-                <img src="assets/images/11329436558065120.jfif" alt="Leather Shoe 270" width="250px" height="250px">
-                <h3> Leather Shoe 270</h3>
-                <p Class="price">₦45,000</p>
-                <div class="product-action-btns">
-                        <button class="product-view-btn" type="button">View</button>
-                        <button class="product-add-btn" type="button">Add to Cart</button>                    
+        <section class="section product-grid-section">
+            <div class="shell">
+                <h2>Feature Product-grid</h2>
+                <div class="product-grid">
+    
                 </div>
-                
-            </article>
-            <article class="product-card">
-                <img src="assets/images/3166662233441836.jfif" alt="Chelsea Boot 270" width="250px" height="250px">
-                <h3> Chelsea Boot 270</h3>
-                <p class="price">₦30,000</p>
-                 <div class="product-action-btns">
-                        <button class="product-view-btn" type="button">View</button>
-                        <button class="product-add-btn" type="button">Add to Cart</button>                    
-                </div>
-            </article>
-            <article class="product-card">
-                <img src="assets/images/Luxury High-Top PU Slip-On Men's Chelsea Boots, British Style Men's Cowboy Boots, Business Formal Work Shoes, Wedding Shoes, Elegant Red Sole Comfortable Slip-On Boots, Autumn Boots, Spring Shoes….jfif"alt="sneakers 270" width="250px" height="250px">
-                <h3> Sneakers 270</h3>
-                <p class="=price">₦25,000</p>
-                <div class="product-action-btns">
-                    <button class="product-view-btn" type="button">View</button>
-                    <button class="product-add-btn" type="button">Add to Cart</button>                    
-                </div>
-            </article>
-            </div>
+            </div> 
         </section>
     </main>
     <footer>
         <p>&copy; 2023 My Website. All rights reserved.</p>
     </footer>
-
-    <script src="../frontend/assets/js/main.js"></script>
+     <script src="../frontend/assets/js/main.js"></script>
+    <script src="../frontend/assets/js/product.js" type="module"></script>
+   
         </body>
         </html>

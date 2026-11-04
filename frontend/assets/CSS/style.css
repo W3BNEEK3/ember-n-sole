@@ -12,13 +12,15 @@
     --color-ember: #FF5A1F;
     --color-ember-muted: #d67a74;
     --color-ember-deep-muted:#9D441a;
-    --color-bone: #F5F1E8;
+    --color-bone: #f3e2bb;
 
     --space-sm: 0.5rem;
     --space-md: 1rem;
     --space-lg: 2rem;
     --space-x1: 3rem;
-
+    --space-section: clamp(3rem, 6vw, 6rem); /* clamp(minimum, preferred, maximum) */
+    --page-gutter: clamp(1rem, 3vw, 2.5rem);
+    --content-max: 112rem;
     --font-size-sm:sm 0.875rem;
     --font-size-base: 1rem; /*1rem=16ppx*/
     --font-size-lg: 1.25rem;
@@ -30,19 +32,26 @@ body{
     color: var(--color-ink);
     background: var(--color-bone);
 }
-main{
-    padding-inline: 40px;
+.section {
+    padding-block: var(--space-section);
+}
+.site-header{
+    background: var(--color-ink);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    color: var(--color-bone);
+}
+.shell {
+    width: min(calc(100% - (2 * var(--page-gutter))), var(--content-max));
+    margin-inline: auto;
 }
 .main-header{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: var(--space-md) var(--space-lg);
-    background: var(--color-ink);
-    color: var(--color-bone);
-    max-width: 95%;
 }
-
 header .logo{
     font-size: var(--font-size-base);
     font-weight: 700;
@@ -98,17 +107,22 @@ header .mobile-menu-btn span{
     width: var(--space-lg);
     margin-bottom: var(--space-sm);
 }
-.mobile-sidebar{                      /*  */
-    background-color: var(--color-ink);
-    border-top: var(--color-bone) solid 1px;
-    padding: var(--space-sm);
-    /* transform: translateY(-500%); */
+.mobile-sidebar{      
+    display: none;             
+    /* transform: translateY(-500%);  */
 }
-.sidebar-container{
+.mobile-sidebar--open{
+    display: block;
+    border-top: var(--color-bone) solid 1px;  
+    /* transform: translateY(0); */
+}
+.mobile-sidebar .shell{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: clamp(1rem, 5vw, 2.5rem);
+    padding-block: var(--space-sm);
 }
-.sidebar-container a{
+.mobile-sidebar .shell a{
     text-decoration: none;
     color: var(--color-bone);
 }
