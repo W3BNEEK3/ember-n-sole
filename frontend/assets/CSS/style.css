@@ -2,6 +2,7 @@
     box-sizing: content-box;
     margin: 0;
     padding: 0;
+    border: 1px solid red;
 }
 
 :root{
@@ -61,7 +62,6 @@ header .search-bar {
     display: flex;
     align-items: center;
 }
-
 header .search-bar input {
     background-color: var(--color-ink-muted);
     padding: var(--space-sm);
@@ -147,10 +147,14 @@ HERO SECTION STYLING
 PRODUCT SECTION STYLING
 */
 .product-grid{
-    display: flex;
-    flex-wrap: wrap;
-    flex: 0 1 250px;
-    gap: 30px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 262px;
+    padding: 0.75rem 0.5rem 1.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-snap-type: inline proximity;
+    gap: 25px;
 }
 .product-grid .product-card{
     display: flex;
