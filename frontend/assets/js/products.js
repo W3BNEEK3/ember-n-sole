@@ -9,7 +9,8 @@ export const products = [
         id: 2,
         name: "Leather Shoe 270",
         price: 45000,
-        image: "assets/images/11329436558065120.jfif"
+        image: "assets/images/11329436558065120.jfif",
+        func: function() {  }
     },
     {
         id: 3,
